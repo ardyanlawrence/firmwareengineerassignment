@@ -1,0 +1,24 @@
+This program will control room temperature using analog sensor & actuator.
+
+Program Start
+
+Initialize Port A Register 0x1000
+Initialize LED to Bit 0 Port A
+Initialize Actuator to Bit 0 Port A
+Initialize ADC Register 0x2000
+Initialize Timer Counter Register 0x3000
+Input Reference Temperature 20 degree Celsius
+
+Read Temperature from Analog sensor
+
+loop forever{
+    If Temperature < Reference Temperature {
+        Turn Off Actuator
+        LED Blink every 1 second
+    }
+    
+
+    Else if Temperature > Reference Temperature {
+        Turn On Actuator
+    }   
+}
